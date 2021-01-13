@@ -33,13 +33,17 @@
         
 	let startRange = formGen.sRange.value;
 	const endRange = formGen.eRange.value;
-	
-	while(startRange < endRange){
-	  list.innerHTML += `<span>dest_TATA[] = NAT_NAT , ${startRange}</span><br>`;
-	  startRange++;	
-	}
 
-	list.innerHTML += `<span>dest_TATA[] = NAT_NAT , ${startRange}</span><br>`;
+	if(startRange =< endRange){
+           while(startRange < endRange){
+	     list.innerHTML += `<span>dest_TATA[] = NAT_NAT , ${startRange}</span><br>`;
+	     startRange++;	
+	   }
+
+	    list.innerHTML += `<span>dest_TATA[] = NAT_NAT , ${startRange}</span><br>`;
+        } else {
+            list.innerHTML += `<span style="color:red;">Start Range must be higher than End Range</span><br>`;
+        }
 
       });
     </script>
