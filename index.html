@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <style>
+	body {
+	  text-align: center;
+	}
+    </style>
+</head>
+
+<body>
+    <h1>Generator</h1>
+    <form class="generator">
+      <label for="sRange">Start Range:</label>
+      <input type="number" id="sRange" name="sRange" required><br><br>
+      <label for="eRange">End Range:</label>
+      <input type="number" id="eRange" name="eRange" required><br><br>
+      <input type="submit" value="Generate">
+    </form>
+    
+    <div class="output">
+	
+    </div>
+    <script>
+      const formGen = document.querySelector('.generator');
+      const list = document.querySelector('.output');
+      
+      formGen.addEventListener('submit', e => {
+        e.preventDefault();
+        list.innerHTML = ``;
+
+	      let startRange = Number(formGen.sRange.value);
+        const endRange = Number(formGen.eRange.value);
+        formGen.reset();
+
+        if(startRange < endRange){
+                while(startRange < endRange){
+                  list.innerHTML += `<span>dest_TATA[]&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;,&emsp;${startRange}</span><br>`;
+                  startRange++;	
+                }
+                
+                list.innerHTML += `<span>dest_TATA[]&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;,&emsp;${startRange}</span><br>`;
+                
+        } else {
+            list.innerHTML += `<span style="color:red;">Start Range must be lower than End Range</span><br>`;
+        }
+
+      });
+    </script>
+</body>
+
+</html>
