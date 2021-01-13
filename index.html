@@ -30,9 +30,9 @@
       
       formGen.addEventListener('submit', e => {
         e.preventDefault();
-        
 	let startRange = formGen.sRange.value;
 	const endRange = formGen.eRange.value;
+        formGen.reset();
 
 	if(startRange < endRange){
            while(startRange < endRange){
