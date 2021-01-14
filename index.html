@@ -1,55 +1,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generator</title>
-    <style>
-	body {
-	  text-align: center;
-	}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Generator</h1>
-    <form class="generator">
-      <label for="sRange">Start Range:</label>
-      <input type="number" id="sRange" name="sRange" required><br><br>
-      <label for="eRange">End Range:</label>
-      <input type="number" id="eRange" name="eRange" required><br><br>
-      <input type="submit" value="Generate">
-    </form>
-    
-    <div class="output">
-	
+  <div class="container">
+    <div class="row top-row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <h1>MGC Destination Generator</h1>
+      </div>
+      <div class="col-lg-3"></div>
     </div>
-    <script>
-      const formGen = document.querySelector('.generator');
-      const list = document.querySelector('.output');
-      
-      formGen.addEventListener('submit', e => {
-        e.preventDefault();
-        list.innerHTML = ``;
 
-	      let startRange = Number(formGen.sRange.value);
-        const endRange = Number(formGen.eRange.value);
-        formGen.reset();
+    <div class="row middle-row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6 generator-col">
+        <form class="generator">
+          <label for="destination">MGC Destination:</label><br>
+          <select id="destination" name="destination" style="display: inline-block;">
+            <option
+              value="dest_BEBBICELL_1[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              BEBBICELL</option>
+            <option
+              value="dest_3STARSNET5[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              3STARSNET5</option>
+            <option
+              value="dest_3STARSNET4[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              3STARSNET4</option>
+            <option
+              value="dest_3STARSNET6[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              3STARSNET6</option>
+            <option
+              value="dest_CITRUS[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              CITRUSTEL</option>
+            <option
+              value="dest_DIALOGA[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              DIALOGA</option>
+            <option
+              value="dest_DNX[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              DNX Networks</option>
+            <option
+              value="dest_Interprem_GEO[]&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              Interpremium GEO</option>
+            <option
+              value="dest_MCXess_new[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              MCXess New</option>
+            <option
+              value="dest_MCXess_new_2[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              MCXess New 2</option>
+            <option
+              value="dest_IPMODU[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              IP MODUS FAILOVER</option>
+            <option
+              value="dest_INOPLA[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              INOPLA</option>
+            <option
+              value="dest_NUMERICFUT[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              NUMERIC FUTUR</option>
+            <option
+              value="dest_BICS_2[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              BICS 2</option>
+            <option
+              value="dest_BICS_FF[]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;,&emsp;">
+              BICS FF</option>
+          </select>
+          <br />
+          <br />
+          <label for="sRange">Start Range:</label><br>
+          <input type="number" id="sRange" name="sRange" required /><br /><br />
+          <label for="eRange">End Range:</label><br>
+          <input type="number" id="eRange" name="eRange" required /><br /><br />
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">Generate</button>
+        </form>
+        <span class="error error-hidden" style="color:red; font-weight:700;">Start Range must be lower than End Range</span><br>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
 
-        if(startRange < endRange){
-                while(startRange < endRange){
-                  list.innerHTML += `<span>dest_TATA[]&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;,&emsp;${startRange}</span><br>`;
-                  startRange++;	
-                }
-                
-                list.innerHTML += `<span>dest_TATA[]&emsp;&emsp;&emsp;&emsp;=&emsp;NAT_NAT&emsp;&emsp;&emsp;,&emsp;${startRange}</span><br>`;
-                
-        } else {
-            list.innerHTML += `<span style="color:red;">Start Range must be lower than End Range</span><br>`;
-        }
+    <div class="row bottom-row">
+      <div class="col-lg-12">
+        <div class="output output-hidden"></div>
+      </div>
+    </div>
 
-      });
-    </script>
+    <div class="row footer">
+        <div class="col-lg-12">
+          <span class="signature">Script made by argentLamming for Mr Jaime</span>
+        </div>
+      </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
